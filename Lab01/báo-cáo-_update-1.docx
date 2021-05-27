@@ -1,0 +1,194 @@
+
+ KHOA CÔNG NGHỆ THÔNG TIN
+ĐẠI HỌC KHOA HỌC TỰ NHIÊN THÀNH PHỐ HỒ CHÍ MINH, ĐẠI HỌC QUỐC GIA TP HCM
+
+
+BẢNG THÔNG TIN CHI TIẾT NHÓM
+MSSV	Họ tên	Email	Điện thoại
+18120408	Trần Ngọc Lan Khanh	18120408@student.hcmus.edu.vn	
+18120401	Mai Khánh Huyền	18120401@student.hcmus.edu.vn	
+18120379	Võ Thị Hiếu	18120379@student.hcmus.edu.vn	
+18120378	Trần Văn Hiếu	18120378@student.hcmus.edu.vn	
+
+Bảng phân công & đánh giá hoàn thành công việc
+Công việc thực hiện	Người thực hiện	Mức độ hoàn thành	Đánh giá của nhóm
+Công việc X	1122333-Nguyễn Văn A	80%	7/10
+			
+			
+			
+			
+			
+			
+			
+
+
+
+
+
+
+YÊU CẦU ĐỒ ÁN- BÀI TẬP
+A. Yêu cầu của Đồ án/Bài tập
+Tìm hiểu mối quan hệ giữa các trường dữ liệu thực tế. 
+B.Kết quả
+I.Lấy dữ liệu:
+Sử dụng thư viện BeautifulSoup và Requests để lấy dữ liệu từ trang https://www.worldometers.info/coronavirus/
+II.Tiền xử lý dữ liệu:
+Sử dụng thư viện Pandas, Numpy để đọc và xử lý dữ liệu
+Chuyển dữ liệu từ Object thành numeric trừ cột Date và Country,Others
+Để đảm bảo tính nhất quán và khách quan, bước đầu không xử lý dữ liệu có giá trị NaN
+III.Phân tích và trực quan dữ liệu:
+Kết hợp thư viên Matplotlib.pyplot và Seaborn để trực quan hóa dữ liệu.
+1.Hướng tiếp cận thứ nhất:
+Tiếp cận dựa vào TotalCases 
+1.1.Phân tích một số trường dữ liệu
+a.Các trường dữ liệu được chọn:
+Chọn các thuộc tính TotalCases, TotalDeaths, TotalRecovered, ActiveCases, Serious,Critical, TotalTests, Population
+Tính chất các thuộc tính đã chọn:
+
+b.Phân tích các trường dữ liệu đã chọn
+-TotalCases
+Giả sử chọn ra top 10 quốc gia có số ca nhiễm nhiều nhất:
+
+Biểu đồ thể hiện sự phân bổ về số ca nhiễm ở mỗi quốc gia:
+
+Ta được các thông tin:
+oHoa Kỳ là quốc gia có số ca nhiễm bệnh cao nhất
+oPhần lớn các quốc gia có số ca nhiễm ít hơn 5 triệu
+o3 nước có số ca nhiễm lớn hơn 5 triệu là: Hoa Kỳ (hơn 30 triệu ca), Brazil (hơn 13 triệu ca), Ấn Độ (hơn 13 triệu ca)
+oHơn 
+oSự chênh lệch về số ca nhiễm của các quốc gia có sự khác biệt lớn theo từng nhóm ( Hoa Kỳ - Brazil, Ấn Độ - phần còn lại)
+-TotalDeaths
+Số ca tử vong ở 10 quốc gia có số ca nhiễm lớn nhất:
+
+Số phân bố về số lượng quốc gia theo số ca tử vong:
+
+Kết luận:
+oHoa Kỳ dẫn đầu về số người tử vong (trong số 10 nước được xét)
+oPhần lớn các quốc gia có số ca tử vong dưới 50 000
+oSố ca tử vong của các quốc gia có sự chênh lệch lớn nhưng không phân chia thành các nhóm rõ ràng
+-TotalRecovered
+Tổng số ca hồi phục:
+
+Sự phân bổ về số lượng quốc gia theo số ca hồi phục:
+
+Kết luận:
+oHoa Kỳ có số ca hồi phục nhiều nhất
+oPhần lớn quốc gia có số ca hồi phục dưới 5 triệu
+oSố ca hồi phục có sự chênh lệch lớn và phân thành từng nhóm (Hoa Kỳ - Brazil, Ấn Độ - còn lại)
+-ActiveCases
+Số ca bệnh tại thời điểm phân tích
+
+Sự phân bổ về số lượng quốc gia theo số ca dương tính:
+
+Kết luận:
+oHoa Kỳ có số ca dương tính nhiều nhất
+oPhần lớn quốc gia có số ca hồi phục dưới 1 triệu
+oSố ca dương tính có sự chênh lệch lớn giữa các quốc gia
+-Serious,Critical
+Số ca nghiêm trọng tại thời điểm phân tích
+
+Sự phân bố về số lượng quốc gia theo số ca nghiêm trọng:
+
+Nhận xét:
+oHoa kỳ có số ca nghiêm trọng nhiều nhất
+oPhần lớn quốc gia có số ca nghiêm trong ít hơn 1000
+oSố ca dương tính có sự chênh lệch không quá lớn giữa các quốc gia. 
+-TotalTests
+Tổng số ca được xét nghiệm:
+
+Sự phân bổ về số quốc gia theo số ca được xét nghiệm
+
+Nhận xét:
+oHoa kỳ có số ca xét nghiệm nhiều nhất
+oPhần lớn quốc gia có số ca xét nghiệm trong ít hơn 100 triệu
+oSố ca xét nghiệm của từng quốc gia có sự chênh lệch lớn
+-Population
+Dân số của các quốc gia:
+
+Sự phân bổ về số quốc gia theo dân số:
+
+Nhận xét: 
+oTrung Quốc và Ấn Độ có dân số lớn nhất
+oPhần lớn quốc gia có dân số ít hơn 200 triệu
+
+1.2.Phân tích quan hệ giữa các trường đã chọn:
+a.Correlation:
+Sử dụng heatmap để biểu diễn độ tương quan giữa các thuộc tính 
+Chọn ra các cặp thuộc tính có tương quan lớn (> 0.85) để biểu diễn: 
+-
+-
+-
+-
+-
+-TotalCases – TotalDeaths
+-TotalCases – TotalRecovered
+-TotalDeaths – TotalRecovered
+-ActiveCases - TotalCases
+-TotalCases – TotalTests
+-TotalRecovered – TotalTests
+b.Phân tích các cặp dữ liệu đã chọn:
+-TotalCases và TotalDeaths
+
+Nhận xét:
+oHệ số góc là của đường tuyến tính là 0,95
+oCác điểm trên đồ thị không bị lệch quá nhiều so với đường tuyến tính ->  Độ lệch chuẩn không quá lớn
+-TotalCases – TotalRecovered
+
+Nhận xét:
+oHệ số góc của đường tuyến tính là 0.99
+oCác điểm trên đồ thị không bị lệch nhiều so với đường tuyến tính -> Tuyến tính hoàn hảo
+-ActiveCases - TotalRecovered
+
+Nhận xét:
+oHệ số góc của đường tuyến tính là 0.76
+oCác điểm trên đồ thị bị lệch nhiều so với đường tuyến tính -> Độ lệch chuẩn lớn
+
+-ToalCases - ActiveCases
+
+Nhận xét:
+oHệ số góc của đường tuyến tính là 0.85
+oRất nhiều điểm trên biểu đồ lệch so với đường tuyến tính và phân bố đều về 2 phía của đường tuyến tính
+　　　　
+-TotalDeaths – TotalRecovered
+
+Nhận xét:
+oHệ số góc của đường tuyến tính là 0.94 
+oRất nhiều điểm trên biểu đồ lệch so với đường tuyến tính và phân bố đều về 2 phía của đường tuyến tính
+-TotalCases – TotalTests
+
+Nhận xét:
+oHệ số góc là 0.88
+oVài điểm biểu đồ lệch so với đường tuyến tính và một vài điểm có độ lệch rất lớn
+-TotalRecovered – TotalTest:
+
+Nhận xét:
+oHệ số góc của đường tuyến tính là 0,87
+c.Phân tích các cặp dữ liệu khác:
+-Tỉ lệ TotalCases/TotalTests giữa các nước:
+
+Nhận xét:
+oTỉ lệ TotalCases/TotalTests của Mexico(>0.3) và Brazil(>0.4) là có cao vướt bậc so với các quốc gia khác 
+oCác quốc gia khác đều có tỉ lệ TotalCases/TotalTests gần như bằng nhau (0.05-0.1) 
+Điều này cho thấy tỉ lệ dương tính trên số ca xét nghiệm COVID-19 ở Mexico và Brazil rất cao, điều này nghĩa là do chính phủ không thể nắm rõ và có đủ khả năng xử lý dịch bệnh của 2 nước Mỹ Latinh này.
+-Tỉ lệ TotalRecovered/TotalCases giữa các nước:
+
+
+Nhận xét: 
+oTỉ lệ TotalRecovered/TotalCases của Pháp là rất thấp với các nước còn lại (<0.1)
+oCác quốc gia còn lại đều có TotalRecovered/TotalCases khá là cao (~0.8)
+Điều này cho thấy việc kiểm soát địch bệnh của Pháp rất kém, bệnh nhân khi mắc Covid-19 ít có cơ hồi phục hồi.
+Tuy nhiên có dấu hiện đáng mừng khi tỉ lệ  phục hồi bệnh của các nước đều cao.
+
+
+-Số lượng TotalDeaths,TotalRecovered, ActiveCases giữa các nước:
+
+
+Nhận xét:
+oMỹ là quốc gia có tổng số ca mắc Covid-19 rất cao, cao vượt bậc so với các quốc gia khác.
+oMỹ, Brazil, Mexico là các quốc gia có số ca tử vong cao nhất, 3 nước này cũng lần lượt 3 nước có số ca mắc Covid cao nhất thế giới.
+oSố lượng ca đang mắc Covid-19 tại thời điểm hiện tại của Mỹ và Pháp là cao nhất. Tuy nhiên, điều đáng lo ngại là Pháp là nước có tỉ lệ phục hồi thấp.
+
+2.Hướng tiếp cận thứ 2: NewCases
+Vẽ sơ đồ heatmap
+
+Ta nhận thấy độ tương quan của NewCases và NewDeaths với các thuộc tính khác không lớn. Vậy ta bỏ qua hướng tiếp cận này, trở lại hướng tiếp cận đầu (dựa theo ToalCases)
